@@ -3,8 +3,12 @@ import numpy as np
 import face_recognition
 import os
 from datetime import datetime
-# from PIL import ImageGrab
- 
+
+
+#Here you have to specify the path of your own base data files which contain the images(of face) of the all the person whose attendance is to be taken
+
+
+
 path = 'ImagesAttendance'
 images = []
 classNames = []
