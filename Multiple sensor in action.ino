@@ -6,18 +6,13 @@
 
 /********* Pin Definition ************/
 
-//Relays for switching appliances
-#define Relay1            D6
-#define Relay2            D2
-#define Relay3            D1
-#define Relay4            D5
-
 //DHT11 for reading temperature and humidity value
 #define DHTPIN            D7
 
 //buzzer to use it for alert
 #define buzzer            D0
 
+// Here i have connceted all the sensors to nodeMCU using Multiplexer
 //Selection pins for multiplexer module to switch between different sensors and give data on a single analog pin.
 #define S0                D3
 #define S1                D4
