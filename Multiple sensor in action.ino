@@ -1,3 +1,25 @@
+/**************************************************************************************************
+In this project Multpile Sensors are interfaced with the Node MCU(ESP8266) 
+and the output of the sensors are seen in BLYNK application
+The Sensors Used here are as follows:
+1)Proximity sensor :-  To detect or sense the approach or presence of nearby objects and for this it does not need physical contact
+2)Light Sensor     :-  To detect the intensity of the light in the room .
+3)Gas sensor       :-  To detect the various types of gases (i.e. in this case CO2 only is detected)
+4)Motion Sensor    :- To detect the motion 
+A multiplexer module is also Configured to switch between the deifferent sensors and get the output of all the sensors on 1 Analog pin(A0) only.
+
+Author and created By : - Rahil Vahora
+
+************************************************************************************************************/
+
+
+
+
+
+
+
+
+
 #define BLYNK_PRINT Serial
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
@@ -13,7 +35,7 @@
 #define buzzer            D0
 
 // Here i have connceted all the sensors to nodeMCU using Multiplexer
-//Selection pins for multiplexer module to switch between different sensors and give data on a single analog pin.
+//Selection pins for multiplexer module to switch between different sensors and give data on a single analog pin(A0).
 #define S0                D3
 #define S1                D4
 
@@ -41,7 +63,7 @@ BlynkTimer timer;
 // Set password to "" for open networks.
 char ssid[] = "******";
 char pass[] = "*****";
-// This function sends Arduino's up time every second to Virtual Pin (5).
+// This function sends MCU's up time every second to Virtual Pin (5).
 // In the app, Widget's reading frequency should be set to PUSH. This means
 // that you define how often to send data to Blynk App.
 void sendSensor()
